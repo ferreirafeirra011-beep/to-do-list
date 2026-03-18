@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+</head>
+<body>
+    <h1>Bem-Vindo ao To-Do List!</h1>
+
+    <div>Escreva suas tarefas aqui:</div>
+    <input type="text" id="meuInput" placeholder="Digite sua tarefa">
+    <button onclick="mostrartexto()">Adicionar</button>
+
+    <ul id="exibirTexto"></ul>
+</body>
+
+<script>
+    function adicionarTarefa() {
+        let input = document.getElementById("meuInput");
+        let texto = input.value;
+
+        if (texto.trim() === "")return;
+
+        let novoItem = document.createElement("li");
+        novoItem.innerText = texto;
+
+        document.getElementById("exibirTexto").appendChild(novoItem);
+    }
+
+        
+</script>
+</html>
