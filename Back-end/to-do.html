@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="js/login.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
@@ -15,11 +16,11 @@
         <h3>Faça seu login!</h3>
     </div>
     <div class="flex items-center justify-center gap-4 mt-4">
-        <input type="text" placeholder="Seu Nome"></div>
+        <input type="text" id="user" placeholder="Seu Nome"></div>
     <div class="flex items-center justify-center gap-4 mt-4">
-        <input type="password" placeholder="Senha"></div>
+        <input type="password" id="pass" placeholder="Senha"></div>
     <div class="flex items-center justify-center mt-4">
-        <a class="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700" href="index.html">Login</a>
+        <a onclick="logar()" class="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700" href="index.html">Login</a>
     </div>
     <div class="flex items-center justify-center gap-4 mt-4">
         <h3>Não tem uma conta? <a class="hover:text-blue-500" href="criar.html">Registre-se aqui!</a></h3>
