@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type = "module" src="js/Java.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
 </head>
 <body>
-    <h1>Bem-Vindo ao To-Do List!</h1>
+    <div>
+        <a class="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700" href="to-do.html">Sair</a>
+    <h1 class="flex items-center justify-center text-3xl font-bold">Bem-Vindo ao To-Do List</h1>
 
-    <div>Escreva suas tarefas aqui:</div>
+    </div>
+    <div class="flex items-center justify-center gap-4 mt-4">Escreva suas tarefas aqui:</div>
+    <div class="flex items-center justify-center gap-4 mt-4">
     <input type="text" id="meuInput" placeholder="Digite sua tarefa">
-    <button onclick="mostrartexto()">Adicionar</button>
-
-    <ul id="exibirTexto"></ul>
+    <button class="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700" onclick="mostrartexto()">Adicionar</button>
+    </div>
+    <div class="min-h-screen bg-gray-100 flex items-center justify-center">
+   
+    <div class="max-w-sm bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+        <h2 class="text-2xl font-semibold text-gray-900">Minha Lista</h2>
+        <p class="text-gray-600 mt-2">Uma caixa moderna com bordas bem arredondadas e sombra sutil.</p>
+    </div>
+</div>
 </body>
 
-<script>
-    function adicionarTarefa() {
-        let input = document.getElementById("meuInput");
-        let texto = input.value;
 
-        if (texto.trim() === "")return;
-
-        let novoItem = document.createElement("li");
-        novoItem.innerText = texto;
-
-        document.getElementById("exibirTexto").appendChild(novoItem);
-    }
-
-        
-</script>
 </html>
