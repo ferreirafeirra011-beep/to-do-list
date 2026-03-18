@@ -6,24 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List</title>
 </head>
-<body>
-    <div>
-        <a class="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700" href="to-do.html">Sair</a>
-    <h1 class="flex items-center justify-center text-3xl font-bold">Bem-Vindo ao To-Do List</h1>
+<body class="bg-gray-100 p-8">
+    <div class="flex flex-col items-center justify-center gap-4">
+        <a class="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 self-end" href="to-do.html">Sair</a>
+        <h1 class="text-3xl font-bold">Bem-Vindo ao To-Do List</h1>
+        
+        <div class="flex gap-2 mt-4">
+            <input type="text" id="inputTarefa" class="border p-2 rounded-md" placeholder="Digite sua tarefa">
+            <!-- Note o onclick chamando a função adicionarTarefa() -->
+            <button class="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700" onclick="adicionarTarefa()">Adicionar</button>
+        </div>
 
+        <!-- Sua caixa moderna onde a lista vai aparecer -->
+        <div class="max-w-sm w-full bg-white p-6 rounded-2xl shadow-xl border border-gray-100 mt-6">
+            <h2 class="text-2xl font-semibold text-gray-900 border-b pb-2">Minha Lista</h2>
+            <ul id="listaContainer" class="mt-4 space-y-2">
+                <!-- As tarefas entrarão aqui -->
+            </ul>
+        </div>
     </div>
-    <div class="flex items-center justify-center gap-4 mt-4">Escreva suas tarefas aqui:</div>
-    <div class="flex items-center justify-center gap-4 mt-4">
-    <input type="text" placeholder="Digite sua tarefa">
-    <button class="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700" onclick="mostrartexto()">Adicionar</button>
-    </div>
-    <div class="min-h-screen bg-gray-100 flex items-center justify-center">
-   
-    <div class="max-w-sm bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
-        <h2 class="text-2xl font-semibold text-gray-900">Minha Lista</h2>
-        <p class="text-gray-600 mt-2">Uma caixa moderna com bordas bem arredondadas e sombra sutil.</p>
-    </div>
-</div>
+
+    <script src="script.js"></script>
 </body>
 
 
